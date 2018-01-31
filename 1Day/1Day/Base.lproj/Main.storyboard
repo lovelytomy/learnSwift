@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A7Y-xn-SR0">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MFt-aD-x7Y">
+            <objects>
+                <navigationController id="A7Y-xn-SR0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EIK-vA-bMy">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7R1-YC-Sjs" kind="relationship" relationship="rootViewController" id="3Gf-LO-elM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNX-4H-7mJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="119"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ao1-9B-oPj">
+            <objects>
+                <viewController id="7R1-YC-Sjs" customClass="ViewController" customModule="_Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tjr-AI-STq"/>
+                        <viewControllerLayoutGuide type="bottom" id="eBQ-uY-8eZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Erg-Fz-ouM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-HT-sQo">
+                                <rect key="frame" x="110" y="209" width="100" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Mey-5s-c90"/>
+                                    <constraint firstAttribute="height" constant="150" id="R2L-5r-DTC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdP-6d-aE8">
+                                <rect key="frame" x="120" y="419" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WMY-39-AZT"/>
+                                    <constraint firstAttribute="width" constant="80" id="m6q-0o-sIZ"/>
+                                </constraints>
+                                <state key="normal" title="tap or hold"/>
+                                <connections>
+                                    <action selector="tapChange:" destination="7R1-YC-Sjs" eventType="touchUpInside" id="Dg9-vc-of6"/>
+                                    <outletCollection property="gestureRecognizers" destination="zrl-Ig-rxd" appends="YES" id="OJD-6x-aj1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gEZ-HT-sQo" firstAttribute="centerX" secondItem="Erg-Fz-ouM" secondAttribute="centerX" id="R7S-bu-INY"/>
+                            <constraint firstItem="gEZ-HT-sQo" firstAttribute="centerY" secondItem="Erg-Fz-ouM" secondAttribute="centerY" id="dTa-9a-iOB"/>
+                            <constraint firstItem="sdP-6d-aE8" firstAttribute="centerX" secondItem="Erg-Fz-ouM" secondAttribute="centerX" id="iBW-mr-Cic"/>
+                            <constraint firstItem="sdP-6d-aE8" firstAttribute="top" secondItem="gEZ-HT-sQo" secondAttribute="bottom" constant="60" id="sdM-h7-KQR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K8B-9g-eAI">
+                        <barButtonItem key="leftBarButtonItem" title="reset" id="Lms-R8-pGY">
+                            <connections>
+                                <action selector="reset:" destination="7R1-YC-Sjs" id="fyT-Ah-Po6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numberLable" destination="gEZ-HT-sQo" id="cLN-fd-ssp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggl-yt-fzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="zrl-Ig-rxd">
+                    <connections>
+                        <action selector="longPress:" destination="7R1-YC-Sjs" id="2CD-Hl-i1c"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="86" y="118"/>
+        </scene>
+    </scenes>
+</document>
