@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nbd-VU-3P7">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FkG-Ag-YL2">
+            <objects>
+                <navigationController id="Nbd-VU-3P7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a1U-ce-JFf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="auQ-tB-1j5" kind="relationship" relationship="rootViewController" id="HWp-P8-4SB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pe7-zS-ibb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="52"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hXj-Av-rC9">
+            <objects>
+                <viewController id="auQ-tB-1j5" customClass="ViewController" customModule="_Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kHv-yE-cr0"/>
+                        <viewControllerLayoutGuide type="bottom" id="UGp-IJ-M2L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qXp-qS-AzY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j51-Wl-5bu">
+                                <rect key="frame" x="110" y="209" width="100" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="JiC-AL-HEO"/>
+                                    <constraint firstAttribute="width" constant="100" id="VkF-Q5-jsB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-k6-QTF">
+                                <rect key="frame" x="110" y="379" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="McA-hD-vfc"/>
+                                    <constraint firstAttribute="width" constant="100" id="zXj-bV-NBf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Tap"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="auQ-tB-1j5" eventType="touchUpInside" id="vKv-Bk-Msg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j51-Wl-5bu" firstAttribute="centerX" secondItem="qXp-qS-AzY" secondAttribute="centerX" id="3ZH-Bu-c8R"/>
+                            <constraint firstItem="j51-Wl-5bu" firstAttribute="centerY" secondItem="qXp-qS-AzY" secondAttribute="centerY" id="BpA-eS-DCe"/>
+                            <constraint firstItem="YQS-k6-QTF" firstAttribute="top" secondItem="j51-Wl-5bu" secondAttribute="bottom" constant="20" id="Np1-CS-9qK"/>
+                            <constraint firstItem="YQS-k6-QTF" firstAttribute="centerX" secondItem="qXp-qS-AzY" secondAttribute="centerX" id="pwT-i1-fUi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kWV-Wm-410">
+                        <barButtonItem key="leftBarButtonItem" title="Reset" id="sie-Ou-Nom">
+                            <connections>
+                                <action selector="resetAction:" destination="auQ-tB-1j5" id="jeX-lI-7Qp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numberLable" destination="j51-Wl-5bu" id="wH7-mL-npK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zF-yO-yjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="51"/>
+        </scene>
+    </scenes>
+</document>
